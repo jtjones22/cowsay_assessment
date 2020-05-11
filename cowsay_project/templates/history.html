@@ -1,0 +1,12 @@
+<a href="{% url 'homepage' %}">Home</a>
+<br>
+<a href="{% url 'history' %}">History</a>
+<br>
+<br>
+<br>
+
+{% for post in items %}
+    <pre>{{ post }}</pre>
+    {% empty %}
+    <p>There are no posts</p>
+{% endfor %}
